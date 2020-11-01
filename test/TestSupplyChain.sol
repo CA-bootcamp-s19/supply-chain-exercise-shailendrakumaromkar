@@ -6,7 +6,7 @@ import "../contracts/SupplyChain.sol";
 
 contract TestSupplyChain {
 
- SupplyChain supplychainInstance = SupplyChain(DeployedAddresses.SupplyChain());
+ /*SupplyChain supplychainInstance = SupplyChain(DeployedAddresses.SupplyChain());
     address acc0;
     address acc1;
     address acc2;
@@ -21,12 +21,13 @@ contract TestSupplyChain {
         return Assert.equal(supplychainInstance.owner(),acc0,"owner is different");
         
     }
+	*/
 
-    // function testOwnerWorking() public returns (bool) {
-    //       SupplyChain supplychainInstance = SupplyChain(DeployedAddresses.SupplyChain());
-    //     return Assert.equal(supplychainInstance.owner(),msg.sender,"owner is different");
+    function testOwnerWorking() public returns (bool) {
+           SupplyChain supplychainInstance = SupplyChain(DeployedAddresses.SupplyChain());
+         return Assert.equal(supplychainInstance.owner(),msg.sender,"owner is different");
         
-    // }
+     }
 
     
     // function beforeEach() public{
